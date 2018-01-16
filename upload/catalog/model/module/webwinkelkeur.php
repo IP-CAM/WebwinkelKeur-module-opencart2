@@ -36,6 +36,7 @@ class ModelModuleWebwinkelkeur extends Model {
                     'language'      => str_replace('-', '_', $order['language_code']),
                     'customer_name' => "$order[payment_firstname] $order[payment_lastname]",
                     'phones' => [$order['telephone']],
+                    'order_total' => $order['total'],
                     'client'    => 'opencart2',
                     'platform_version' => VERSION,
                     'plugin_version' => '1.1'
